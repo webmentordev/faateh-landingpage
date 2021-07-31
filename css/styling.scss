@@ -1,0 +1,303 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 100;
+}
+
+section {
+    width: 100%;
+    .container {
+        padding: 20px 1em;
+        max-width: 1200px;
+        margin: auto;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+ ::-webkit-scrollbar-track {
+    background: #d3d3d3;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: #6b6b6b;
+    border-radius: 50px;
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #494949;
+}
+
+
+/*=======================================*/
+
+nav {
+    background-image: url('../img/nav.png');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    width: 100%;
+    a {
+        color: #333;
+        font-weight: 400;
+        margin: 0px 10px;
+    }
+}
+
+
+/*=======================================*/
+
+.header {
+    height: 100vh;
+    width: 100%;
+    background-image: url('../img/header.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container {
+        text-align: center;
+        img {
+            margin-bottom: 30px;
+        }
+        p {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+
+/*=======================================*/
+
+.about {
+    .container {
+        padding: 150px 1em;
+        p {
+            font-weight: 400;
+            line-height: 25px;
+            font-family: 'Roboto', sans-serif;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+    }
+}
+
+
+/*=======================================*/
+
+.services {
+    background-color: #fffaf0;
+    .container {
+        padding: 150px 1em;
+        .title {
+            font-weight: 700;
+            line-height: 30px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 60px;
+            padding: 50px 1em;
+            .box {
+                padding: 30px;
+                text-align: center;
+                img {
+                    width: 140px;
+                    margin-bottom: 20px;
+                }
+                h1 {
+                    font-weight: 400;
+                    font-size: 20px;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
+
+
+/*=======================================*/
+
+.footer {
+    .container {
+        padding: 100px 1em;
+        .details {
+            border-bottom: 1px #cecece solid;
+            width: 100%;
+            padding: 20px 0px;
+            .title {
+                font-size: 18px;
+                font-weight: 600;
+                margin-bottom: 10px;
+            }
+            .title2 {
+                font-size: 18px;
+                font-weight: 400;
+            }
+        }
+        .flex {
+            width: 100%;
+            display: flex;
+            padding: 30px 0px;
+            .box {
+                width: 100%;
+                .title {
+                    margin-bottom: 30px;
+                }
+                ul {
+                    color: #333;
+                    list-style: none;
+                    height: 70%;
+                    .text {
+                        margin-bottom: 15px;
+                        color: #9b9b9b;
+                    }
+                    li {
+                        font-weight: 400;
+                        color: #333;
+                        margin: 10px 0px;
+                        strong {
+                            font-size: 16px;
+                        }
+                    }
+                }
+                .rights {
+                    display: flex;
+                    align-items: flex-end;
+                    color: #1c98eb;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+
+/*
+==============================================================================
+================================Responsive====================================
+==============================================================================
+*/
+
+@media screen and (max-width: 1180px) {
+    .services {
+        .container {
+            padding: 100px 1em;
+            .grid {
+                grid-template-columns: repeat(3, 1fr);
+                padding: 50px 0em;
+                .box {
+                    img {
+                        width: 140px;
+                    }
+                    h1 {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+    .footer {
+        .container {
+            padding: 50px 1em;
+            .flex {
+                .box {
+                    ul {
+                        height: 70%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .services {
+        .container {
+            padding: 50px 1em;
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 50px 0em;
+                .box {
+                    img {
+                        width: 140px;
+                    }
+                    h1 {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+    .footer {
+        .container {
+            padding: 50px 1em;
+            .flex {
+                flex-direction: column;
+                .box {
+                    ul {
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .services {
+        .container {
+            padding: 50px 1em;
+            .grid {
+                grid-template-columns: repeat(1, 1fr);
+                padding: 50px 0em;
+                .box {
+                    img {
+                        width: 140px;
+                    }
+                    h1 {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .header {
+        height: 80vh;
+        .container {
+            img {
+                width: 80%;
+                margin-bottom: 30px;
+            }
+            p {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
